@@ -25,3 +25,13 @@ function handleNoClick() {
 function handleYesClick() {
     window.location.href = "yes_page.html";
 }
+
+function play() { //Link Audio Bisa Diganti
+    var audio = new Audio('./valen.mp3');
+    audio.play();
+    audio.loop = true;
+    audio.addEventListener('ended', function () {
+        this.currentTime = 0;
+        this.play();
+    }, false);
+}
